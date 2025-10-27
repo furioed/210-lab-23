@@ -57,3 +57,40 @@ int main() {
     return 0;
 }
 
+int main_menu() { // Main menu display and returns user's choices
+    int choice;
+    cout << "\n*** GOAT MANAGER 3001 ***\n";
+    cout << "[1] Add a goat\n";
+    cout << "[2] Delete a goat\n";
+    cout << "[3] List goats\n";
+    cout << "[4] Quit\n";
+    cout << "Choice --> ";
+    cin >> choice;
+    cout << endl;
+    return choice;
+
+}
+
+void add_goat(list<Goat> &trip, string names[], string colors[]) { // Random goat gets added
+    int randname = rand() % SZ_NAMES;
+    int randColor = rand() % SZ_COLORS;
+    int randAge = rand() % (MAX_AGE + 1);
+
+    string name = names[randName];
+    string color = colors[randColor];
+    Goat g(name, randAge, color);
+
+    trip.push_back(g);
+    trip.sort();
+
+    cout << "Added: " << g << endl;
+
+}
+
+void display_trip(const list<Goat> &trip) {
+    if (trip.empty()) {
+        cout << "No goats on the trip.\n";
+        return;
+    }
+
+    
