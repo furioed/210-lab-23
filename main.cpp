@@ -1,3 +1,7 @@
+// COMSC-210 | Lab 23 | Mamadou Sissoko
+// IDE used: Visual Studio Code
+// Goat manager from starter code
+
 #include <iostream>
 #include <fstream>
 #include <iomanip>
