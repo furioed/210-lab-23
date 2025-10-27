@@ -7,7 +7,7 @@ using namespace std;
 
 const int SZ_NAMES = 200, SZ_COLORS = 25, MAX_AGE = 20;
 
-int select_goat(list<Goat> trip);
+int select_goat(const list<Goat> &trip);
 void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string [], string []);
 void display_trip(list<Goat> trip);
@@ -72,7 +72,7 @@ int main_menu() { // Main menu display and returns user's choices
 }
 
 void add_goat(list<Goat> &trip, string names[], string colors[]) { // Random goat gets added
-    int randname = rand() % SZ_NAMES;
+    int randName = rand() % SZ_NAMES;
     int randColor = rand() % SZ_COLORS;
     int randAge = rand() % (MAX_AGE + 1);
 
