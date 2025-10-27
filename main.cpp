@@ -10,12 +10,12 @@ const int SZ_NAMES = 200, SZ_COLORS = 25, MAX_AGE = 20;
 int select_goat(const list<Goat> &trip);
 void delete_goat(list<Goat> &trip);
 void add_goat(list<Goat> &trip, string [], string []);
-void display_trip(list<Goat> trip);
+void display_trip(const list<Goat> &trip);
 int main_menu();
 
 int main() { 
     srand(time(0));
-    bool again;
+    list<Goat> trip;
 
     // read & populate arrays for names and colors
     ifstream fin("names.txt");
@@ -43,7 +43,7 @@ int main() {
             case 3:
                 display_trip(trip);
                 break;
-            case 4;
+            case 4:
                 cout << "Goodbye\n";
                 running = false;
                 break;

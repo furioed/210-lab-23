@@ -16,11 +16,7 @@ public:
 
     Goat(string n) { name = n; age = 0; color = ""; } // Constructor with name
 
-<<<<<<< HEAD
-    Goat(string n, int a) { name = n; age = a; color = ''; } // Constructor with name and age
-=======
     Goat(string n, int a) { name = n; age = a; color = ""; } // Constructor with name and age
->>>>>>> bb9044a (Lab 23 Update 5)
 
     Goat(string n, int a, string c) { name = n; age = a; color = c; } // Constructor with name, age, and color
 
