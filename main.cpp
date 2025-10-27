@@ -13,7 +13,7 @@ void add_goat(list<Goat> &trip, string [], string []);
 void display_trip(list<Goat> trip);
 int main_menu();
 
-int main() {
+int main() { 
     srand(time(0));
     bool again;
 
@@ -117,7 +117,7 @@ int select_goat(const list<Goat> &trip) { // Allows user to choose a goat from t
     return choice;
 }
 
-void delete_goat(list<Goat> &trip) { // Deletes a goat from the list
+void delete_goat(list<Goat> &trip) { // Deletes a goat from the list by index
     if (trip.empty()) {
         cout << "No goats to delete.\n";
         return;
@@ -136,3 +136,4 @@ void delete_goat(list<Goat> &trip) { // Deletes a goat from the list
     trip.erase(it);
 
 }
+
